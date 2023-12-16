@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   font-family: "Times New Roman", serif;
@@ -29,10 +30,11 @@ body {
 .contenedor_CV .informacion_personal .foto img {
   aspect-ratio: 4/4;
   width: 100%;
-  height: 100%;
   border-radius: 50%;
   border: 6px solid rgb(54, 54, 54);
   background-color: gray;
+  max-width: 100%;
+  height: auto;
 }
 .contenedor_CV .informacion_personal .datos {
   width: 70%;
@@ -227,6 +229,16 @@ body {
 .contenedor_CV .proyectos ul li dt div.imagen img {
   border-radius: 10px;
   margin-inline: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .contenedor_CV {
+    width: 100%;
+  }
+  .contenedor_CV .informacion_personal {
+    flex-direction: column;
+  }
+  /* Añade más estilos según sea necesario */
 }
 
 /*# sourceMappingURL=app.css.map */
